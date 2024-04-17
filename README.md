@@ -9,7 +9,7 @@
 - [Timsort](#timsort)
 - [Gnome Sort](#gnome-sort)
 - [Odd-Even Sort](#odd-even-sort)
-- [Radix Sort](#radix-sort)
+- [Radix Sort LSD](#radix-sort-lsd)
 - [Heap Sort](#heap-sort)
 - [Selection Sort](#selection-sort)
 - [Cycle Sort](#cycle-sort)
@@ -239,7 +239,7 @@ void insertionSort(int arr[], int n)
 
 ---
 
-## Radix Sort
+## Radix Sort LSD
 
 ### Реализация на языке с++
 
