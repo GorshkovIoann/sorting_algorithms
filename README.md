@@ -225,6 +225,7 @@ Timsort — гибридный алгоритм сортировки, сочет
 
 ### Реализация на языке с++
 
+```c++
 //Tim Sort. 
 using namespace std; 
 const int RUN = 32; 
@@ -250,8 +251,8 @@ void insertionSort(int arr[], int left, int right)
 void merge(int arr[], int l, int m, int r) 
 { 
   
-    // Original array is broken in two 
-    // parts left and right array 
+    // изначальный массив разделяется      //на два 
+    //левый и правый 
     int len1 = m - l + 1, len2 = r - m; 
     int left[len1], right[len2]; 
     for (int i = 0; i < len1; i++) 
@@ -263,9 +264,9 @@ void merge(int arr[], int l, int m, int r)
     int j = 0; 
     int k = l; 
   
-    // After comparing, we 
-    // merge those two array 
-    // in larger sub array 
+    // после сравнения мы  
+    // сливаем их обратно
+    // точно как в merge sort
     while (i < len1 && j < len2) { 
         if (left[i] <= right[j]) { 
             arr[k] = left[i]; 
@@ -278,16 +279,14 @@ void merge(int arr[], int l, int m, int r)
         k++; 
     } 
   
-    // Copy remaining elements of 
-    // left, if any 
+    // аналогично merge sort 
     while (i < len1) { 
         arr[k] = left[i]; 
         k++; 
         i++; 
     } 
   
-    // Copy remaining element of 
-    // right, if any 
+    // аналогично merge sort
     while (j < len2) { 
         arr[k] = right[j]; 
         k++; 
@@ -333,7 +332,7 @@ void timSort(int arr[], int n)
         } 
     } 
 } 
-  
+``` 
 
 
 ### Анализ сложности и памяти
