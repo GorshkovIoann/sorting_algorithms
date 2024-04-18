@@ -392,6 +392,7 @@ void gnomeSort(int arr[], int n)
 Память: Алгоритм сортирует на месте и не требует доп памяти=> O(1)
 
 Анализ сложности: лучший случай О(n) - отсортированный массив. Худший - O(n^2) - убывающий массив.(в этом случае гном будет для каждого элемента совершать 2к движений, где к - индекс элемента)
+
 ---
 
 ## Counting Sort
@@ -481,21 +482,26 @@ int digit(int number, int position) {
 //radix sort функция, m - мах колво разрядов числа в массиве А
 // n - длинна массива
 void radixSort(int[] A, int m, int n):
-     int[10] C = 0;
+     //вспомогательный массив B который будет заполняться как в counting sort
+     int[n] B;
+     //для каждого разряда начиная с правого
      for(int i = 1; i < m; i++){
-          int[n] B;                                
+          //создаем вспомогательный массив для хранения количества тех или иных разрядов
+          int[10] C = 0;
+         //реализуем counting sort для i разряда чисел                               
          for(int j = 0; j < n - 1; j++){
-             int d = digit(A[j], i)
-             C[d]++
+             int d = digit(A[j], i);
+             C[d]++;
          }
-         count = 0
+         //заполняем В аналогично counting sort
+         int count = 0;
          for(int j = 0 ; j <= 9;j++){
-             tmp = C[j]
-             C[j] = count
-             count += tmp
+             int tmp = C[j];
+             C[j] = count;
+             count += tmp;
          }
          for(int j = 0; j < n - 1; j++){
-             d = digit(A[j], i)                             
+            int  d = digit(A[j], i)                             
              B[C[d]] = A[j]            
              C[d]++
          }
