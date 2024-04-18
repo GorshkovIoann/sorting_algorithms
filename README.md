@@ -44,9 +44,9 @@ Bubble sort (также известен как сортировка пузыр�
 ### Реализация на языке с++
 ```c++
  void bubbleSort(vector<int>& array){ 
-  for (var i = 0; i < array.size() i++){
+  for (int i = 0; i < array.size(); i++){
     bool swapped = false;
-    for ( var j = 0; j < array.size() — i — 1; j++){
+    for ( int j = 0; j < array.size() — i — 1; j++){
       if (array[j] > array[j + 1] ){
         swap(array[j], array[j + 1]);
         swapped = true;
