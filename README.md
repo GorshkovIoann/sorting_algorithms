@@ -67,6 +67,8 @@ Bubble sort (также известен как сортировка пузыр�
 
 В среднем мы имеем (n-1) + (n-2) + ... + ... = n(n-1)/2. Отсюда средняя сложность также О(n)
 
+[sorting bobble](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/Figurebubblesort.png)
+
 ---
 
 ## Merge Sort
