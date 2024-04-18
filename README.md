@@ -405,38 +405,38 @@ void gnomeSort(int arr[], int n)
 
 ### Реализация на языке с++
 ```c++
+#include <algorithm>
 using namespace std;
- 
-vector<int> countSort(vector<int>& inputArray)
+
+void countSort(int inputArray[], int n)
 {
- 
-    int N = inputArray.size();
- 
+
     // находим наибольший элемент inputArray[].
     int M = 0;
- 
-    for (int i = 0; i < N; i++)
+
+    for (int i = 0; i < n; i++)
         M = max(M, inputArray[i]);
- 
+
     // инициализируем вектор countArray[] нулями
-    vector<int> countArray(M + 1, 0);
- 
+    int *countArray = new int[M + 1];
+    std::fill_n(countArray, 10, 0);
+
     // Сопоставим каждый элемент inputArray[] как индекс
     // массива countArray[]
- 
-    for (int i = 0; i < N; i++)
+
+    for (int i = 0; i < n; i++)
         countArray[inputArray[i]]++;
-    //записываем в массив числа от меньшего к большему
-    //столько раз сколько они встречались в изначальном массиве
+    // записываем в массив числа от меньшего к большему
+    // столько раз сколько они встречались в изначальном массиве
     int pos = 0;
-    for(int number = 0 ; number <= k - 1;number++){
-        for (int i = 0; i< countArray[number] - 1;i++){
+    for (int number = 0; number <= 9; number++)
+    {
+        for (int i = 0; i < countArray[number] - 1; i++)
+        {
             inputArray[pos] = number;
             pos = pos + 1;
         }
     }
-    return inputArray;
-
 }
 ```
 ### Анализ сложности и памяти
