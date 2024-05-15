@@ -707,7 +707,7 @@ Shell sort а в основном является разновидностью 
 – Остановка.
 
 ### Реализация на языке с++
-``c++
+```c++
 void ShellSort(std::vector<int> &arr)
 {
     int n = arr.size();
