@@ -179,7 +179,6 @@ void mergeSort(int array[], int const begin, int const end)
 
 1[](https://static.miraheze.org/sortingalgoswiki/thumb/7/7b/Mergesort.gif/280px-Mergesort.gif)
 
-![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/merge_sort.png)
 
 ---
 
@@ -373,7 +372,7 @@ Aнализ сложности: Не сложно заметить, что че�
 может занимать O(n⋅RUN) времени. Откуда видно, что константа RUN играет немалое значение: при большом RUN слияний будет меньше, а сортировки вставками будут выполняться долго. Причём эти функции растут с разной скоростью, поэтому и ещё после экспериментов на различных значениях и был выбран оптимальный диапазон — от 32 до 64.
 
 
-![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/timsort.png)
+
 
 ---
 
@@ -537,7 +536,7 @@ void radixSort(int A[], int m, int n){
 
 ![](https://static.miraheze.org/sortingalgoswiki/thumb/f/f1/RadixLSD.gif/280px-RadixLSD.gif)
 
-![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/lsd.png)
+
 
 ---
 
@@ -623,7 +622,7 @@ void heapSort(int arr[], int n)
 
 ![](https://static.miraheze.org/sortingalgoswiki/1/15/HeapSort.gif)
 
-![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/heapsort.png)
+
 ---
 
 ## Selection Sort
