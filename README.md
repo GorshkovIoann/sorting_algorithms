@@ -794,5 +794,5 @@ void ShellSort(std::vector<int> &arr)
 ---
 ## Источники
 
-(https://sortingalgos.miraheze.org/wiki)
-(https://www.geeksforgeeks.org)
+[Википедия Сортировок](https://sortingalgos.miraheze.org/wiki)
+[GeekForGeeks](https://www.geeksforgeeks.org)
