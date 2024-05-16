@@ -740,6 +740,33 @@ void ShellSort(std::vector<int> &arr)
 
 # Эксперимент cравнение эффективности алгоритмов на разных компиляторах
 
+## min-gw64 (Windows)
+
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/mingw_graphs/random_all_graphs.png)
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/mingw_graphs/random_nlogn_graphs.png)
+
+
+## clang (macOS)
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/clang_graphs/random_all_graphs.png)
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/clang_graphs/random_nlogn_graphs.png)
+
+## g++ (macOS)
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/gcc_graphs/random_all_graphs.png)
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/gcc_graphs/random_nlogn_graphs.png)
+
+## среднее время сортировки каждого компилятора
+
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/bigAllcompilers.png)
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/bigAllcompilersTim2.png)
+
+## разница между clang и g++
+![](https://github.com/GorshkovIoann/sorting_algorithms/blob/main/bigclang-biggcc.png)
+А если усреднить то clang обгоняет g++ примерно на 6.088265876456868e-04 секунды
+
+## Вывод
+1) Гипотеза подтверждена и время сортировки даже на одинаковых данных у разных компиляторов будет разным.
+2) Популярные современные компиляторы достаточно оптимизированны и зачастую не сильно уступают друг другу.
+3) Скорость сортировки во многом зависит не столько от компилятора сколько от мощностей самого компьютера(именно поэтому мы и можем наблюдать столь существенныую разницу между компилятором mingw стоящим на компьютере windows и другими двумя с macOs)
 
 ---
 ## Источники
